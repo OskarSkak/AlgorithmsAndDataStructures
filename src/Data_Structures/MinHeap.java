@@ -1,3 +1,5 @@
+package Data_Structures;
+
 public class MinHeap {
     private Element[] elements;
     private int heapSize;
