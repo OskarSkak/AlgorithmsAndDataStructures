@@ -10,6 +10,11 @@ public class ArrayUtil {
         System.out.println();
     }
 
+    public static void printArray(String message, int[] arr){
+        System.out.print(message);
+        printArray(arr);
+    }
+
     public static int[] generateSorted(int size){
         int[] arr = new int[size];
         for(int i = 0; i < arr.length; i++){
@@ -34,5 +39,12 @@ public class ArrayUtil {
             arr[i] = rand.nextInt(max - min) + min + 1;
         }
         return arr;
+    }
+
+    public static boolean checkIfSorted(int[] arr){
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i] < arr[i - 1]) return false;
+        }
+        return true;
     }
 }
