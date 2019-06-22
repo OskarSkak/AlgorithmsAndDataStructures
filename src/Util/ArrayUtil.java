@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class ArrayUtil {
     public static void printArray(int[] arr){
-        System.out.print("****************************Printing array of size: " + arr.length + "****************************\n");
+        System.out.println("\n****************************Printing array of size: " + arr.length + "****************************");
         for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + ", ");
             if((i + 1) % 10 == 0) System.out.println();
@@ -13,7 +13,7 @@ public class ArrayUtil {
     }
 
     public static void printArray(String message, int[] arr){
-        System.out.print(message);
+        System.out.print("\n" + message);
         printArray(arr);
     }
 
@@ -41,6 +41,10 @@ public class ArrayUtil {
             arr[i] = rand.nextInt(max - min) + min + 1;
         }
         return arr;
+    }
+
+    public static int[] generateRandom(int size){
+        return generateRandom(size, 1, 100);
     }
 
     public static boolean checkIfSorted(int[] arr){

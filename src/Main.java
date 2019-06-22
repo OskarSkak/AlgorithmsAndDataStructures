@@ -2,15 +2,24 @@ import Sorting_Algorithms.*;
 import Data_Structures.*;
 import Util.ArrayUtil;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
 
-    public static void main(String[] args) {
-        int[] random = ArrayUtil.generateRandom(50, 10, 1000);
-        int[] sorted = ArrayUtil.generateSorted(50);
-        int[] reverse = ArrayUtil.generateReverse(50);
+    public static void main(String[] args)
+    {
 
-        InsertionSort.sort(random);
-        ArrayUtil.printArray(random);
-        System.out.print(ArrayUtil.checkIfSorted(random));
+        int[] arr = {-1, -2, -3, -4, -5, -6, -7};
+        MaxHeap heap = new MaxHeap(10);
+
+        for(int i = 0; i < arr.length; i++)
+            heap.insert(arr[i]);
+
+
+        heap.printHeap();
+        heap.extractMax();
+        heap.printHeap();
+
     }
 }
